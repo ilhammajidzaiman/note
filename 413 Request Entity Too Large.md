@@ -1,6 +1,7 @@
 # 413 Request Entity Too Large
 
-```base
+```bash
+#error
 413 Request Entity Too Large
 nginx/1.24.0 (Ubuntu)
 ```
@@ -17,7 +18,7 @@ Tambahkan atau sesuaikan parameter jika konfigurasi secara `Global` atau hanya u
 
 ### Global: `/etc/nginx/nginx.conf`
 
-```base
+```bash
 http {
     client_max_body_size 20M;
 }
@@ -25,7 +26,7 @@ http {
 
 ### Per-situs: `/etc/nginx/sites-available/<nama_situs>`
 
-```base
+```bash
 server {
     client_max_body_size 20M;
 }
@@ -35,7 +36,7 @@ server {
 
 Simpan perubahan, `restart` Nginx.
 
-```base
+```bash
 sudo systemctl restart nginx
 #atau
 sudo service nginx restart
@@ -47,7 +48,7 @@ PHP memiliki batasan bawaan untuk ukuran file upload. Suaikan parameter `upload_
 
 ### Konfigurasi File `php.ini`
 
-sesuaikan dengan versi PHP Anda
+konfigurasi bisa pada `fpm` dan `cli` sesuai dengan versi PHP yang digunakan
 
 - `/etc/php/8.3/fpm/php.ini`
 
@@ -55,7 +56,7 @@ sesuaikan dengan versi PHP Anda
 
 Edit file `php.ini` dan sesuaikan nilainya:
 
-```base
+```bash
 upload_max_filesize = 20M
 post_max_size = 20M
 ```
@@ -66,6 +67,6 @@ post_max_size = 20M
 
 Simpan perubahan, `restart` php-fpm.
 
-```base
+```bash
 sudo systemctl restart php8.3-fpm
 ```
