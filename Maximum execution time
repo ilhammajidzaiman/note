@@ -1,0 +1,7 @@
+# Maximum execution time
+
+Ubuntu/Debian:
+PHP FPM:
+/etc/php/X.Y/fpm/php.ini (ganti X.Y dengan versi PHP, misalnya 8.1)
+PHP CLI:
+/etc/php/X.Y/cli/php.ini
