@@ -1,28 +1,24 @@
 # <u>Revese Nginx</u>
 
-Konfigurasi webserver nginx di `ubuntu` atau distro turunan
+Konfigurasi webserver nginx di `ubuntu`
 
-### Cek izin
+### Cek izin:
 
 ```bash
 ls -la
 ```
 
-### Ubah kepemilikan
-
-cara 1
+### Ubah kepemilikan:
 
 ```bash
+#cara 1
 sudo chown -R $(whoami):$(whoami) /var/www/project
-```
 
-cara 2
-
-```bash
+#cara 2
 sudo chown -R $USER:$USER /var/www/project
 ```
 
-### Ubah izin
+### Ubah izin:
 
 ```bash
 sudo chmod -R 775 /var/www/project
@@ -30,19 +26,19 @@ sudo chmod -R 775 /var/www/project
 
 # <u>Memberikan akses ke git terhadap direktori</u>
 
-### Hapus files `lock`.
+### Hapus files `lock`:
 
 ```bash
 rm -f .git/index.lock
 ```
 
-### Reset commit `terakhir`.
+### Reset commit `terakhir`:
 
 ```bash
 git reset --hard HEAD
 ```
 
-### Restart Your Machine
+### Restart servis:
 
 ```bash
 sudo nginx -t
