@@ -10,11 +10,14 @@ ls -la
 
 ### Ubah kepemilikan:
 
-```bash
-#cara 1
-sudo chown -R $(whoami):$(whoami) /var/www/project
+##### cara 1
 
-#cara 2
+```bash
+sudo chown -R $(whoami):$(whoami) /var/www/project
+```
+
+##### cara 2
+```bash
 sudo chown -R $USER:$USER /var/www/project
 ```
 
