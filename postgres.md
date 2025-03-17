@@ -1,7 +1,7 @@
 # Instalation
 
 ```bash
-sudo apt install postgresql postgresql-contrib
+sudo apt-get install postgresql postgresql-contrib
 ```
 
 # Cek versi
@@ -21,7 +21,7 @@ sudo systemctl status postgresql
 ```
 
 ```bash
-sudo systemctl start postgresql
+sudo systemctl enable postgresql
 ```
 
 ```bash
@@ -33,5 +33,13 @@ sudo -u postgres createdb -O namapengguna namadatabase
 ```
 
 ```bash
+sudo systemctl start postgresql
+sudo systemctl stop postgresql
 sudo systemctl restart postgresql
+```
+
+# Dokumentasi
+
+```bash
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-22-04
 ```

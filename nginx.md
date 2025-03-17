@@ -1,8 +1,8 @@
 # Instalation
 
 ```bash
-sudo apt update
-sudo apt install nginx
+sudo apt-get update
+sudo apt-get install nginx
 ```
 
 # Setting Firewall
@@ -16,7 +16,7 @@ sudo ufw enable
 # Checking Web Server
 
 ```bash
-systemctl status nginx
+sudo systemctl status nginx
 ```
 
 # Managing the Nginx Process
@@ -58,6 +58,22 @@ sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
 
 ```bash
 sudo nginx -t
+```
 
-sudo systemctl restart nginx
+# Firewall
+
+```bash
+sudo ufw app list
+sudo ufw allow 'nginx http'
+sudo ufw status
+```
+
+# Dokumentasi
+
+```bash
+https://ubuntu.com/server/docs/how-to-install-nginx
+
+https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-22-04
+
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu#step-3-installing-php
 ```

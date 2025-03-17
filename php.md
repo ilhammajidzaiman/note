@@ -49,3 +49,9 @@ sudo apt-get install php-tokenizer
 ```bash
 sudo apt-get install php-xml
 ```
+
+# Dokumentasi
+
+```bash
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu#step-3-installing-php
+```
