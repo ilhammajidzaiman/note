@@ -81,7 +81,7 @@ sudo apt-get install php-tokenizer
 ```
 
 ```bash
-sudo apt-get install php8.2-intl
+sudo apt-get install php-intl
 ```
 ```bash
 sudo apt-get install php-xml
