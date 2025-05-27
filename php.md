@@ -65,6 +65,22 @@ sudo apt-get install php-mbstring
 ```
 
 ```bash
+sudo apt-get install php-tokenizer
+```
+
+```bash
+sudo apt-get install php-intl
+```
+
+```bash
+sudo apt-get install php-xml
+```
+
+```bash
+sudo apt-get install php-gd
+```
+
+```bash
 # untuk mysql
 sudo apt-get install php-mysql
 
@@ -73,18 +89,6 @@ sudo apt-get install php-pgsql
 
 # untuk sqlite
 sudo apt-get install php-sqlite3
-
-```
-
-```bash
-sudo apt-get install php-tokenizer
-```
-
-```bash
-sudo apt-get install php-intl
-```
-```bash
-sudo apt-get install php-xml
 ```
 
 ### remove all package and config
