@@ -5,18 +5,18 @@ sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:ondrej/php
 ```
 
-### install versi 8.3 dengan paket
+### install versi 8.4 dengan paket
 
 ```bash
-sudo apt-get install php8.3 php8.3-fpm php8.3-cli php8.3-mysql php8.3-xml php8.3-curl php8.3-mbstring
+sudo apt-get install php8.4 php8.4-fpm php8.4-cli php8.4-mysql php8.4-xml php8.4-curl php8.4-mbstring php8.4-pgsql php8.4-sqlite3 php8.4-tokenizer
 ```
 
-### jalankan php-fpm 8.3
+### jalankan php-fpm 8.4
 
 ```bash
-sudo systemctl start php8.3-fpm
-sudo systemctl enable php8.3-fpm
-sudo systemctl status php8.3-fpm
+sudo systemctl start php8.4-fpm
+sudo systemctl enable php8.4-fpm
+sudo systemctl status php8.4-fpm
 ```
 
 ### restart nginx
@@ -34,7 +34,7 @@ php -v
 ### ubah versi php-cli
 
 ```bash
-sudo update-alternatives --install /usr/bin/php php /usr/bin/php8.3 83
+sudo update-alternatives --install /usr/bin/php php /usr/bin/php8.4 84
 sudo update-alternatives --config php
 ```
 
@@ -65,6 +65,14 @@ sudo apt-get install php-mbstring
 ```
 
 ```bash
+sudo apt-get install php-tokenizer
+```
+
+```bash
+sudo apt-get install php-xml
+```
+
+```bash
 # untuk mysql
 sudo apt-get install php-mysql
 
@@ -73,15 +81,6 @@ sudo apt-get install php-pgsql
 
 # untuk sqlite
 sudo apt-get install php-sqlite3
-
-```
-
-```bash
-sudo apt-get install php-tokenizer
-```
-
-```bash
-sudo apt-get install php-xml
 ```
 
 ### remove all package and config
