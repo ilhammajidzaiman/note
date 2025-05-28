@@ -65,14 +65,6 @@ sudo apt-get install php-mbstring
 ```
 
 ```bash
-sudo apt-get install php-tokenizer
-```
-
-```bash
-sudo apt-get install php-xml
-```
-
-```bash
 # untuk mysql
 sudo apt-get install php-mysql
 
