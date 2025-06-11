@@ -1,17 +1,21 @@
-# Install banyak versi
+# tambahkan repository
 
 ```bash
 sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:ondrej/php
 ```
 
-### install versi 8.4 dengan paket
+# install php
+
+1. install.
 
 ```bash
-sudo apt-get install php8.4 php8.4-fpm php8.4-cli php8.4-mysql php8.4-xml php8.4-curl php8.4-mbstring php8.4-pgsql php8.4-sqlite3 php8.4-tokenizer
+sudo apt-get install php8.4
+sudo apt-get install php8.4-fpm
+sudo apt-get install php8.4-cli
 ```
 
-### jalankan php-fpm 8.4
+2. jalankan php-fpm.
 
 ```bash
 sudo systemctl start php8.4-fpm
@@ -19,63 +23,44 @@ sudo systemctl enable php8.4-fpm
 sudo systemctl status php8.4-fpm
 ```
 
-### restart nginx
+3. `restart` nginx.
 
-```bash
-sudo systemctl reload nginx
-```
-
-### cek versi php
+4. cek versi php
 
 ```bash
 php -v
 ```
 
-### ubah versi php-cli
+5. `ubah versi` php-cli
 
 ```bash
-sudo update-alternatives --install /usr/bin/php php /usr/bin/php8.4 84
 sudo update-alternatives --config php
 ```
 
-# PHP extensions
+# extensions
 
 ```bash
-sudo apt-get install php-ctype
+sudo apt-get install php8.4-fpm
+sudo apt-get install php8.4-cli
+sudo apt-get install php8.4-xml
+sudo apt-get install php8.4-curl
+sudo apt-get install php8.4-mbstring
+sudo apt-get install php8.4-mysql
+sudo apt-get install php8.4-pgsql
+sudo apt-get install php8.4-sqlite3
+sudo apt-get install php8.4-tokenizer
+sudo apt-get install php8.4-ctype
+sudo apt-get install php8.4-fileinfo
+sudo apt-get install php8.4-filter
 ```
+
+# install dengan paket extensions
 
 ```bash
-sudo apt-get install php-curl
+sudo apt-get install php8.4 php8.4-fpm php8.4-cli php8.4-xml php8.4-curl php8.4-mbstring php8.4-mysql php8.4-pgsql php8.4-sqlite3 php8.4-tokenizer php8.4-ctype php8.4-fileinfo php8.4-filter
 ```
 
-```bash
-sudo apt-get install php-xml
-```
-
-```bash
-sudo apt-get install php-fileinfo
-```
-
-```bash
-sudo apt-get install php-filter
-```
-
-```bash
-sudo apt-get install php-mbstring
-```
-
-```bash
-# untuk mysql
-sudo apt-get install php-mysql
-
-# untuk postgres
-sudo apt-get install php-pgsql
-
-# untuk sqlite
-sudo apt-get install php-sqlite3
-```
-
-### remove all package and config
+# remove semua paket dan pengaturan
 
 ```bash
 sudo systemctl stop php*-fpm
