@@ -51,6 +51,7 @@ sudo apt-get install php8.4-sqlite3
 sudo apt-get install php8.4-tokenizer
 sudo apt-get install php8.4-zip
 sudo apt-get install php8.4-intl
+sudo apt-get install php8.4-gd
 sudo apt-get install php8.4-ctype
 sudo apt-get install php8.4-fileinfo
 sudo apt-get install php8.4-filter
@@ -59,7 +60,7 @@ sudo apt-get install php8.4-filter
 # install dengan paket extensions
 
 ```bash
-sudo apt-get install php8.4 php8.4-fpm php8.4-cli php8.4-xml php8.4-curl php8.4-mbstring php8.4-mysql php8.4-pgsql php8.4-sqlite3 php8.4-tokenizer php8.4-zip php8.4-intl php8.4-ctype php8.4-fileinfo php8.4-filter
+sudo apt-get install php8.4 php8.4-fpm php8.4-cli php8.4-xml php8.4-curl php8.4-mbstring php8.4-mysql php8.4-pgsql php8.4-sqlite3 php8.4-tokenizer php8.4-zip php8.4-intl php8.4-gd php8.4-ctype php8.4-fileinfo php8.4-filter
 ```
 
 # remove semua paket dan pengaturan
