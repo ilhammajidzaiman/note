@@ -1,79 +1,97 @@
-# Instalation
+# instalasi
 
 ```bash
-sudo apt-get update
 sudo apt-get install nginx
 ```
 
-# Setting Firewall
+# firewall
 
 ```bash
-sudo ufw app list
-
+sudo ufw status
 sudo ufw enable
+sudo ufw app list
+sudo ufw allow 'nginx http'
 ```
 
-# Checking Web Server
+# command
 
 ```bash
 sudo systemctl status nginx
-```
-
-# Managing the Nginx Process
-
-```bash
-sudo systemctl stop nginx
 sudo systemctl start nginx
+sudo systemctl stop nginx
 sudo systemctl restart nginx
 sudo systemctl reload nginx
-sudo systemctl disable nginx
 sudo systemctl enable nginx
+sudo systemctl disable nginx
 ```
 
-# Setting Up Server Blocks
+# server blocks
 
-```bash
-sudo mkdir -p /var/www/your_domain/html
-```
-
-```bash
-sudo chown -R $USER:$USER /var/www/your_domain/html
-```
+1. masuk kedirektori.
 
 ```bash
-sudo chmod -R 755 /var/www/your_domain
+cd /etc/nginx/sites-available/your_domain
 ```
 
-```bash
-nano /var/www/your_domain/html/index.html
-```
-
-```bash
-sudo nano /etc/nginx/sites-available/your_domain
-```
+2. buat symbolic link.
 
 ```bash
 sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
 ```
 
+3. cek status.
+
 ```bash
 sudo nginx -t
 ```
 
-# Firewall
+4. `restart` nginx.
+
+# project
+
+directori project nginx di ubuntu `/var/www/`.
+
+1. cek izin.
 
 ```bash
-sudo ufw app list
-sudo ufw allow 'nginx http'
-sudo ufw status
+ls -la
 ```
 
-# Dokumentasi
+2. ubah kepemilikan.
 
 ```bash
-https://ubuntu.com/server/docs/how-to-install-nginx
+# cara 1
+sudo chown -R $(whoami):$(whoami) /var/www/project
 
-https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-22-04
+# cara 2
+sudo chown -R $USER:$USER /var/www/project
 
-https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu#step-3-installing-php
+# cara 3
+chown -R www-data:www-data /var/www/project
 ```
+
+3. ubah izin direktori.
+
+```bash
+# bisa semua path
+sudo chmod -R 775 /var/www/project
+
+# atau khusus storage
+sudo chmod -R 775 /var/www/project/storage
+```
+
+# memberikan akses ke git terhadap direktori
+
+1. hapus files `lock`.
+
+```bash
+rm -f .git/index.lock
+```
+
+2. `reset` commit terakhir.
+
+```bash
+git reset --hard HEAD
+```
+
+3. `restart` nginx.
