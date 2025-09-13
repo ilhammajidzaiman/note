@@ -33,3 +33,10 @@ rm -f .git/index.lock
 ```bash
 git reset --hard HEAD
 ```
+# how to
+
+### update semua branch remote ke lokal
+
+```bash
+git fetch --all
+```
