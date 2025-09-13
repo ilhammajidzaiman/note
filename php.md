@@ -37,6 +37,11 @@ php -v
 sudo update-alternatives --config php
 ```
 
+# konflik dengan herd
+```bash
+rm -rf ~/.config/herd-lite
+```
+
 # extensions
 
 ```bash
