@@ -33,10 +33,66 @@ rm -f .git/index.lock
 ```bash
 git reset --hard HEAD
 ```
+
 # how to
 
-### update semua branch remote ke lokal
+## 1. remote
+
+#### update semua branch remote ke lokal
 
 ```bash
 git fetch --all
+```
+
+#### tambahkan branch remote ke branch lokal
+
+```bash
+git fetch origin branch_1:branch_1
+git checkout branch_1
+```
+
+## 2. local
+
+#### lihat branch
+
+```bash
+git branch
+```
+
+#### buat branch baru
+
+```bash
+git branch branch_1
+```
+
+#### hapus branch
+
+```bash
+git branch -d branch_1
+```
+
+`-d` = hanya bisa dihapus kalau sudah merge ke branch lain.
+
+`-D` = paksa hapus walaupun belum merge.
+
+#### pindah ke branch lain
+
+```bash
+git checkout branch_1
+```
+
+#### merg dari `branch_1` ke `branch_2`
+
+```bash
+# pindah ke branch_2
+git checkout branch_2
+
+# merge branch yang akan di gabungkan
+git merge branch_1
+```
+
+#### push `branch_1` ke remote
+
+```bash
+git push origin branch_1
 ```
